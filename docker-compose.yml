@@ -1,0 +1,23 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: nova
+      POSTGRES_USER: nova
+      POSTGRES_PASSWORD: nova
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+    env_file:
+      - ./.env
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+
+volumes:
+  pgdata:

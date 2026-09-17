@@ -1,0 +1,6 @@
+{
+  "name": "BLOCH BOY AI VIDEO",
+  "description": "BLOCH BOY AI VIDEO: Professional AI video generation studio with secure admin provider workspace, modular provider switching, access requests, and user video management.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
